@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JVMApp.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JavaCodeManipulation</a> &gt; <a href="index.source.html" class="el_package">me.whiteship.jvm</a> &gt; <span class="el_source">JVMApp.java</span></div><h1>JVMApp.java</h1><pre class="source lang-java linenums">package me.whiteship.jvm;
+
+import java.util.List;
+
+<span class="nc" id="L5">public class JVMApp {</span>
+
+    static String myName;
+
+    static {
+<span class="nc" id="L10">        myName = &quot;hong&quot;;</span>
+<span class="nc" id="L11">    }</span>
+
+<span class="nc" id="L13">    private String foo = &quot;bar&quot;;</span>
+
+    public static void main(String[] args) {
+        //클래스 상속 알아보기
+<span class="nc" id="L17">        System.out.println(JVMApp.class.getSuperclass());</span>
+
+        //객체는 힙 영역에 생성
+<span class="nc" id="L20">        JVMApp jvmApp = new JVMApp();</span>
+
+<span class="nc" id="L22">        System.out.println(JVMApp.class.getClassLoader());</span>
+<span class="nc" id="L23">        System.out.println(List.class.getClassLoader());</span>
+
+        //currantThread 는 java 로 구현된게 아니라 C 로 구현되어 있음, native 키워드를 사용
+<span class="nc" id="L26">        Thread.currentThread();</span>
+<span class="nc" id="L27">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
