@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ko"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Masulsa2.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JavaCodeManipulation</a> &gt; <a href="index.source.html" class="el_package">me.whiteship.bitecode</a> &gt; <span class="el_source">Masulsa2.java</span></div><h1>Masulsa2.java</h1><pre class="source lang-java linenums">package me.whiteship.bitecode;
+
+import net.bytebuddy.ByteBuddy;
+import net.bytebuddy.dynamic.ClassFileLocator;
+import net.bytebuddy.implementation.FixedValue;
+import net.bytebuddy.pool.TypePool;
+
+import java.io.File;
+import java.io.IOException;
+
+import static net.bytebuddy.matcher.ElementMatchers.named;
+
+<span class="nc" id="L13">public class Masulsa2 {</span>
+    public static void main(String[] args) {
+//        ClassLoader classLoader = Masulsa2.class.getClassLoader();
+//        TypePool typePool = TypePool.Default.of(classLoader);
+//        try {
+//            new ByteBuddy().redefine(typePool.describe(&quot;me.whiteship.bitecode.Moja2&quot;).resolve(),
+//                            ClassFileLocator.ForClassLoader.of(classLoader))
+//                    .method(named(&quot;pullOut&quot;)).intercept(FixedValue.value(&quot;Rebbit2!&quot;))
+//                    .make().saveIn(new File(&quot;C:\\Java\\Test\\Study\\JavaCodeManipulation\\target\\classes\\&quot;));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+<span class="nc" id="L26">        System.out.println(new Moja2().pullOut());</span>
+<span class="nc" id="L27">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
