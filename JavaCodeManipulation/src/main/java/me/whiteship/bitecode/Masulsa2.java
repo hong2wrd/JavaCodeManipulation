@@ -22,7 +22,6 @@ public class Masulsa2 {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
         System.out.println(new Moja2().pullOut());
     }
 }
