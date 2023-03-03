@@ -1,4 +1,4 @@
-package me.whithship;
+package me.whiteship;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
