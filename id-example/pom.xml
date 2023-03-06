@@ -3,17 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>me.whiteship</groupId>
-  <artifactId>refactoring-example</artifactId>
+  <artifactId>di-example</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>refactoring-example</name>
+  <name>di-example</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -23,11 +21,5 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-          <groupId>junit</groupId>
-          <artifactId>junit</artifactId>
-          <version>4.13.2</version>
-          <scope>test</scope>
-      </dependency>
   </dependencies>
 </project>
