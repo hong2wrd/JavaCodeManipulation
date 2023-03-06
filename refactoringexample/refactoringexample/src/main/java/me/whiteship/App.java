@@ -1,5 +1,7 @@
 package me.whiteship;
 
+import me.whiteship.annotation.MyAnnotation;
+
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
@@ -66,6 +68,22 @@ public class App {
             System.out.println(Modifier.isPrivate(modifiers));
             System.out.println(Modifier.isPublic(modifiers));
             System.out.println(Modifier.isStatic(modifiers));
+        });
+
+        System.out.println("===== 에노테이션 확인 =====");
+        Arrays.stream(Book.class.getAnnotations()).forEach(System.out::println); // @Retention(RetentionPolicy.RUNTIME) 을 해야 나옴
+        Arrays.stream(MyBook.class.getAnnotations()).forEach(System.out::println); // MyBook 이 상속 받는 클래스의 애노테이션까지 가져옴
+        Arrays.stream(MyBook.class.getDeclaredAnnotations()).forEach(System.out::println); // MyBook 에 있는 애노테이션만 가져옴
+        Arrays.stream(Book.class.getDeclaredFields()).forEach(f -> {
+            Arrays.stream(f.getAnnotations()).forEach(System.out::println);
+        });
+        Arrays.stream(Book.class.getDeclaredFields()).forEach(f -> {
+            Arrays.stream(f.getAnnotations()).forEach(a -> {
+                if (a instanceof MyAnnotation) {
+                    MyAnnotation myAnnotation = (MyAnnotation) a;
+                    System.out.println(myAnnotation.value());
+                }
+            });
         });
 
     }
